@@ -8,10 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace e_yama.Areas.Identity.Data
 {
-    public class IdentityDataContext : IdentityDbContext<IdentityUser>
+    public class IdentityDataContext : IdentityDbContext<EyamaUser>
     {
-        public IdentityDataContext(DbContextOptions<IdentityDataContext> options)
-            : base(options)
+        public IdentityDataContext(DbContextOptions options): base(options)
         {
         }
 

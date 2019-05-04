@@ -17,7 +17,7 @@ namespace e_yama.Areas.Identity
             builder.ConfigureServices((context, services) => {
                 services.AddDbContext<IdentityDataContext>(options =>
                     options.UseSqlServer(
-                        context.Configuration.GetConnectionString("IdentityDataContextConnection")));
+                        context.Configuration.GetConnectionString("DefaultConnection")));
 
                 services.AddDefaultIdentity<IdentityUser>()
                     .AddEntityFrameworkStores<IdentityDataContext>();

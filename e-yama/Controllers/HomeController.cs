@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using e_yama.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace e_yama.Controllers
 {
@@ -19,6 +20,7 @@ namespace e_yama.Controllers
         {
             return View();
         }
+        [Authorize]
         public IActionResult Store()
         {
             return View();

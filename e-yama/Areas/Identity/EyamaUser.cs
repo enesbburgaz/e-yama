@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace e_yama.Areas.Identity
 {
-    public class EyamaUser : IdentityUser
+    public class EyamaUser
     {
     }
 }

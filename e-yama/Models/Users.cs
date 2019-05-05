@@ -8,8 +8,8 @@ namespace e_yama.Models
 {
     public class Users
     {
-        public int Id { get; set; } //pk
-        public string Email { get; set; } //unique
+        //public int Id { get; set; } //pk
+        //public string Email { get; set; } //unique
         public string Name { get; set; }
         public string Phone { get; set; }
         public string Password { get; set; }

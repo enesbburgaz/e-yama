@@ -1,5 +1,4 @@
 using System;
-using e_yama.Areas.Identity.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -15,12 +14,6 @@ namespace e_yama.Areas.Identity
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
-                services.AddDbContext<IdentityDataContext>(options =>
-                    options.UseSqlServer(
-                        context.Configuration.GetConnectionString("DefaultConnection")));
-
-                services.AddDefaultIdentity<IdentityUser>()
-                    .AddEntityFrameworkStores<IdentityDataContext>();
             });
         }
     }

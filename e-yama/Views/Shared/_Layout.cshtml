@@ -40,8 +40,8 @@
                         <li><a href="#"><i class="fa fa-map-marker"></i> Mersin</a></li>
                     </ul>
                     <ul class="header-links pull-right">
-                        <li><a href="~/Identity/Account/Manage"><i class="fa fa-user-o"></i>Hesabım</a></li>
-                        <!--Html.Partial("_LoginPartial")-->
+                        <partial name="_LoginPartial"/>
+                        <li><a href="#"><i class="fa fa-user-o"></i>Hesabım</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                         <!-- LOGO -->
                         <div class="col-md-3">
                             <div class="header-logo">
-                                <a href="https://localhost:44374" class="logo">
+                                <a class="logo" asp-controller="Home" asp-action="Index">
                                     <img src="~/img/logo.png" alt="">
                                 </a>
                             </div>
@@ -128,8 +128,8 @@
                                             <h5>SUBTOTAL: $2940.00</h5>
                                         </div>
                                         <div class="cart-btns">
-                                            <a href="~/Identity/Account/Manage">Sepetim</a>
-                                            <a href="#">Çıkış <i class="fa fa-arrow-circle-right"></i></a>
+                                            <a asp-controller="Cart" asp-action="Index">Sepetim</a>
+                                            <a href="#" type="hidden">Çıkış <i class="fa fa-arrow-circle-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -161,7 +161,7 @@
                 <div id="responsive-nav">
                     <!-- NAV -->
                     <ul class="main-nav nav navbar-nav">
-                        <li class="active"><a href="https://localhost:44374">Ana Sayfa</a></li>
+                        <li class="active"><a asp-controller="Home" asp-action="Index">Ana Sayfa</a></li>
                         <li><a href="#">Çimento</a></li>
                         <li><a href="#">Tuğla</a></li>
                         <li><a href="#">Boyalar</a></li>

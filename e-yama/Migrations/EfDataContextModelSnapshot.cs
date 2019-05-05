@@ -21,7 +21,7 @@ namespace e_yama.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("ConcurrencyStamp")
@@ -63,7 +63,7 @@ namespace e_yama.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("AccessFailedCount");
@@ -120,7 +120,7 @@ namespace e_yama.Migrations
 
                     b.Property<string>("ClaimValue");
 
-                    b.Property<int>("UserId")
+                    b.Property<string>("UserId")
                         .IsRequired();
 
                     b.HasKey("Id");
@@ -140,7 +140,7 @@ namespace e_yama.Migrations
 
                     b.Property<string>("ProviderDisplayName");
 
-                    b.Property<int>("UserId")
+                    b.Property<string>("UserId")
                         .IsRequired();
 
                     b.HasKey("LoginProvider", "ProviderKey");
@@ -152,9 +152,9 @@ namespace e_yama.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
                 {
-                    b.Property<int>("UserId");
+                    b.Property<string>("UserId");
 
-                    b.Property<int>("RoleId");
+                    b.Property<string>("RoleId");
 
                     b.HasKey("UserId", "RoleId");
 
@@ -165,7 +165,7 @@ namespace e_yama.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.Property<int>("UserId");
+                    b.Property<string>("UserId");
 
                     b.Property<string>("LoginProvider")
                         .HasMaxLength(128);

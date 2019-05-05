@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using e_yama.Data;
 using Microsoft.AspNetCore.Identity;
 
 namespace e_yama.Models
 {
-    public class Users
+    public class EYUsers : IdentityUser
     {
-        //public int Id { get; set; } //pk
-        //public string Email { get; set; } //unique
-        public string Name { get; set; }
-        public string Phone { get; set; }
-        public string Password { get; set; }
         public DateTime DateJoined { get; set; }
         public DateTime Modified { get; set; }
         public int Type { get; set; }

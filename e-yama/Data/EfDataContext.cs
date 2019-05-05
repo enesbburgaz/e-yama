@@ -12,7 +12,7 @@ namespace e_yama.Data
 {
     public class EfDataContext : IdentityDbContext
     {
-        public EfDataContext(DbContextOptions<EfDataContext> options):base(options)
+        public EfDataContext(DbContextOptions options):base(options)
         {
             
         }

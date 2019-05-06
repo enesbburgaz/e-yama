@@ -8,7 +8,7 @@ namespace e_yama.Models
     public class Address
     {
         public int Id { get; set; } //pk
-        public int UserId { get; set; } //fk
+        public EYUser EYUser { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }

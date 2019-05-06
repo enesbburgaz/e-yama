@@ -2,8 +2,8 @@ namespace e_yama.Models
 {
     public class Product
     {
-        public int Id { get; set; } //pk
-        public int CategoryId { get; set; } //fk
+        public int Id { get; set; }
+        public Category Category { get; set; }
         public string ProductName { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; }

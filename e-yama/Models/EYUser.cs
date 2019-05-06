@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace e_yama.Models
 {
-    public class EYUsers : IdentityUser
+    public class EYUser : IdentityUser
     {
         public DateTime DateJoined { get; set; }
         public DateTime Modified { get; set; }

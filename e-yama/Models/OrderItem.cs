@@ -10,6 +10,8 @@ namespace e_yama.Models
         public int Id { get; set; } //pk
         public int OrderId { get; set; } //fk
         public int ProductDetails { get; set; } //fk
+        public int UnitId { get; set; } //fk
         public int Quantity { get; set; }
+
     }
 }

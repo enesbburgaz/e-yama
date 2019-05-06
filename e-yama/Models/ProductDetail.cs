@@ -5,9 +5,12 @@ using System.Threading.Tasks;
 
 namespace e_yama.Models
 {
-    public class Categories
+    public class ProductDetail
     {
         public int Id { get; set; } //pk
-        public string CategoryName { get; set; }
+        public int ProductId { get; set; } //fk
+        public string Size { get; set; }
+        public string Color { get; set; }
+
     }
 }

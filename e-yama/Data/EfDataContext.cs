@@ -16,6 +16,7 @@ namespace e_yama.Data
         : base(options)
         {
         }
+        public DbSet<EYUser> EYUsers {get; set;}
         public DbSet<Address> Addres { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
         public DbSet<Category> Categories { get; set; }

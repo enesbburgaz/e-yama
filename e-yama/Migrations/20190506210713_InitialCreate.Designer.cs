@@ -10,7 +10,7 @@ using e_yama.Data;
 namespace e_yama.Migrations
 {
     [DbContext(typeof(EfDataContext))]
-    [Migration("20190506144547_InitialCreate")]
+    [Migration("20190506210713_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

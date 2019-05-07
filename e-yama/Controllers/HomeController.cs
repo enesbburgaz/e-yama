@@ -6,14 +6,21 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using e_yama.Models;
 using Microsoft.AspNetCore.Authorization;
+using e_yama.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace e_yama.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly EfDataContext _context;
+        public HomeController(EfDataContext context)
         {
-            return View();
+            _context = context;
+        }
+        public async Task<IActionResult> Index()
+        {
+            return View(await _context.Products.ToListAsync());
         }
 
         public IActionResult Product()

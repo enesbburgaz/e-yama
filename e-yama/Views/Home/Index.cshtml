@@ -186,8 +186,10 @@
 
                 <div class="products-widget-slick" data-nav="#slick-nav-3">
                     <div>
-                        @foreach (var item in Model)
-                        {                        
+                        @{int i = 0;}
+                       @foreach (var item in Model)
+                        {       
+                            if(i++ == 5){ break;}                       
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
@@ -215,8 +217,10 @@
 
                 <div class="products-widget-slick" data-nav="#slick-nav-4">
                     <div>
-                      @foreach (var item in Model)
-                        {                        
+                        @{int j = 0;}
+                       @foreach (var item in Model)
+                        {       
+                            if(j++ == 5){ break;}                       
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">
@@ -246,8 +250,10 @@
 
                 <div class="products-widget-slick" data-nav="#slick-nav-5">
                     <div>
+                        @{int k = 0;}
                        @foreach (var item in Model)
-                        {                        
+                        {       
+                            if(k++ == 5){ break;}                 
                         <!-- product widget -->
                         <div class="product-widget">
                             <div class="product-img">

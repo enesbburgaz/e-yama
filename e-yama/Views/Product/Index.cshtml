@@ -2,7 +2,6 @@
 @{
     ViewData["Title"] = "E-Yama";
 }
-
 <!-- BREADCRUMB -->
 <div id="breadcrumb" class="section">
     <!-- container -->
@@ -21,8 +20,6 @@
     <!-- /container -->
 </div>
 <!-- /BREADCRUMB -->
-@foreach(var item in Model)
-{
 <!-- SECTION -->
 <div class="section">
     <!-- container -->
@@ -33,11 +30,11 @@
             <div class="col-md-5 col-md-push-2">
                 <div id="product-main-img">
                     <div class="product-preview">
-                        <img src="@item.Product.ImageUrl" alt="">
+                        <img src=" item.Product.ImageUrl" alt="">
                     </div>
 
                     <div class="product-preview">
-                        <img src="@item.Product.ImageUrl" alt="">
+                        <img src=" item.Product.ImageUrl" alt="">
                     </div>
                 </div>
             </div>
@@ -46,10 +43,10 @@
             <div class="col-md-2  col-md-pull-5">
                 <div id="product-imgs">
                     <div class="product-preview">
-                        <img src="@item.Product.ImageUrl" alt="">
+                        <img src=" item.Product.ImageUrl" alt="">
                     </div>
                     <div class="product-preview">
-                        <img src="@item.Product.ImageUrl" alt="">
+                        <img src=" item.Product.ImageUrl" alt="">
                     </div>
                 </div>
             </div>
@@ -57,7 +54,7 @@
             <!-- Product details -->
             <div class="col-md-5">
                 <div class="product-details">
-                    <h2 class="product-name">@item.Product.ProductName</h2>
+                    <h2 class="product-name"> item.Product.ProductName</h2>
                     <div>
                         <div class="product-rating">
                             <i class="fa fa-star"></i>
@@ -69,10 +66,10 @@
                         <a class="review-link" href="#">1 Yorum | Yorum yaz</a>
                     </div>
                     <div>
-                        <h3 class="product-price">@item.Product.Price</h3>
+                        <h3 class="product-price"> item.Product.Price</h3>
                         <span class="product-available">STOKTA VAR</span>
                     </div>
-                    <p>@item.Product.Description</p>
+                    <p> item.Product.Description</p>
 
                     <div class="product-options">
                         <label>
@@ -298,7 +295,7 @@
     <!-- /container -->
 </div>
 <!-- /SECTION -->
-}
+
 <!-- Section -->
 <div class="section">
     <!-- container -->
@@ -316,25 +313,26 @@
             <div class="col-md-3 col-xs-6">
                 <div class="product">
                     <div class="product-img">
-                        <img src="~/img/product01.png" alt="">
+                        <img src="~/img/resim.png" alt="">
                         <div class="product-label">
                             <span class="sale">-30%</span>
+                            <span class="sale">YENİ</span>
                         </div>
                     </div>
                     <div class="product-body">
-                        <p class="product-category">Category</p>
-                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                        <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+                        <p class="product-category">Kategori</p>
+                        <h3 class="product-name"><a href="#">Ürün adı</a></h3>
+                        <h4 class="product-price">100 TL<del class="product-old-price">200 TL</del></h4>
                         <div class="product-rating">
                         </div>
                         <div class="product-btns">
-                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">istek listesine ekle</span></button>
+                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">Karşılaştırmak için ekle</span></button>
+                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Hızlı görünüm</span></button>
                         </div>
                     </div>
                     <div class="add-to-cart">
-                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Sepete Ekle</button>
                     </div>
                 </div>
             </div>

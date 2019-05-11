@@ -23,14 +23,9 @@ namespace e_yama.Controllers
             return View(await _context.Products.ToListAsync());
         }
 
-        public IActionResult Cimento()
+        public async Task<IActionResult> Store(int id)
         {
-            //var item = await _context.Products.Where(x => x.Category.Id == 1).ToListAsync();
-            return RedirectToAction("Store");
-        }
-        public IActionResult Store()
-        {
-            return View();
+            return View(await _context.Products.Where(x => x.Category.Id == id).ToListAsync());
         }
         public IActionResult Checkout()
         {

@@ -1,4 +1,4 @@
-﻿@model e_yama.Models.Category;
+﻿@model IEnumerable<e_yama.Models.Product>
 @{
     ViewData["Title"] = "Store";
 }
@@ -99,19 +99,27 @@
                             <input type="checkbox" id="brand-1">
                             <label for="brand-1">
                                 <span></span>
-                                SAMSUNG
+                                MARSHALL
+                                <small>(578)</small>
+                            </label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="brand-1">
+                            <label for="brand-1">
+                                <span></span>
+                                FILLI BOYA
                                 <small>(578)</small>
                             </label>
                         </div>
                     </div>
                 </div>
                 <!-- /aside Widget -->
-                <!-- aside Widget -->
+                <!-- aside Widget 
                 <div class="aside">
                     <h3 class="aside-title">EN COK SATAN</h3>
                     <div class="product-widget">
                         <div class="product-img">
-                            <img src="~/img/product01.png" alt="">
+                            <img src="" alt="">
                         </div>
                         <div class="product-body">
                             <p class="product-category">Category</p>
@@ -119,29 +127,7 @@
                             <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
                         </div>
                     </div>
-
-                    <div class="product-widget">
-                        <div class="product-img">
-                            <img src="~/img/product02.png" alt="">
-                        </div>
-                        <div class="product-body">
-                            <p class="product-category">Category</p>
-                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                            <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                        </div>
-                    </div>
-
-                    <div class="product-widget">
-                        <div class="product-img">
-                            <img src="~/img/product03.png" alt="">
-                        </div>
-                        <div class="product-body">
-                            <p class="product-category">Category</p>
-                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                            <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                        </div>
-                    </div>
-                </div>
+                </div>-->
                 <!-- /aside Widget -->
             </div>
             <!-- /ASIDE -->
@@ -151,15 +137,15 @@
                 <div class="store-filter clearfix">
                     <div class="store-sort">
                         <label>
-                            Sort By:
+                            Sırala:
                             <select class="input-select">
-                                <option value="0">Popular</option>
+                                <option value="0">Popüler</option>
                                 <option value="1">Position</option>
                             </select>
                         </label>
 
                         <label>
-                            Show:
+                            Göster:
                             <select class="input-select">
                                 <option value="0">20</option>
                                 <option value="1">50</option>
@@ -175,31 +161,30 @@
                 <!-- store products -->
                 <div class="row">
                     <!-- product -->
-                    <div class="col-md-4 col-xs-6">
-                        <div class="product">
-                            <div class="product-img">
-                                <img src="~/img/product01.png" alt="">
-                                <div class="product-label">
-                                    <span class="sale">-30%</span>
-                                    <span class="new">NEW</span>
+                      @foreach (var item in Model)
+                               {
+                                   <div class="col-md-4 col-xs-6">
+                                <div class="product"> 
+                                    <div class="product-img">
+                                        <img src="@item.ImageUrl" alt="">
+                                    </div>
+                                    <div class="product-body">
+                                        <p class="product-category">@Html.DisplayFor(modelItem => item.Category.CategoryName)</p>
+                                        <h3 class="product-name"><a href="#">@Html.DisplayFor(modelItem => item.ProductName)</a></h3>
+                                        <h4 class="product-price">@Html.DisplayFor(modelItem => item.Price) TL</h4>
+                                    </div>
+                                    <div class="add-to-cart">
+                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Sepete Ekle</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00</h4>
-                            </div>
-                            <div class="add-to-cart">
-                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-                            </div>
-                        </div>
-                    </div>
+                                </div>
+                                }                      
                     <!-- /product --> 
                 </div>
                 <!-- /store products -->
                 <!-- store bottom filter -->
                 <div class="store-filter clearfix">
-                    <span class="store-qty">Showing 20-100 products</span>
+                    <span class="store-qty">20-100 ÜRÜN GÖSTERİLİYOR</span>
                     <ul class="store-pagination">
                         <li class="active">1</li>
                         <li><a href="#">2</a></li>

@@ -149,10 +149,10 @@
                     <!-- NAV -->
                     <ul class="main-nav nav navbar-nav">
                         <li class="active"><a asp-controller="Home" asp-action="Index">Ana Sayfa</a></li>
-                        <li><a asp-controller="Home" asp-action="Cimento">Çimento</a></li>
-                        <li><a href="#">Tuğla</a></li>
-                        <li><a href="#">Boyalar</a></li>
-                        <li><a href="#">Seramik</a></li>
+                        <li>@Html.ActionLink("Çimento", "Store", "Home", new { id = "1" }, null)</li>
+                        <li>@Html.ActionLink("Tuğla", "Store", "Home", new { id = "2" }, null)</li>
+                        <li>@Html.ActionLink("Boyalar", "Store", "Home", new { id = "3" }, null)</li>
+                        <li>@Html.ActionLink("Seramik", "Store", "Home", new { id = "4" }, null)</li>
                     </ul>
                     <!-- /NAV -->
                 </div>

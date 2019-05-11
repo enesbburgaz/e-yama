@@ -23,11 +23,11 @@ namespace e_yama.Controllers
             return View(await _context.Products.ToListAsync());
         }
 
-        public IActionResult Product()
+        public IActionResult Cimento()
         {
-            return View();
+            //var item = await _context.Products.Where(x => x.Category.Id == 1).ToListAsync();
+            return RedirectToAction("Store");
         }
-        [Authorize]
         public IActionResult Store()
         {
             return View();

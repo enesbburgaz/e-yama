@@ -33,10 +33,11 @@
                             <div class="products-slick" data-nav="#slick-nav-1">
                                 <!-- product -->
                                 @foreach (var item in Model)
-                                {        
+                                {      
                                 <div class="product">
+                                    <a asp-controller="Product" asp-action="Index" asp-route-id="@item.Id">
                                     <div class="product-img">
-                                       <img src="@item.ImageUrl" alt="">
+                                        <img src="@item.ImageUrl" alt="">
                                         <div class="product-label">
                                             <span class="sale">-30%</span>
                                         </div>
@@ -46,10 +47,12 @@
                                         <h3 class="product-name">@Html.DisplayFor(modelItem => item.ProductName)</h3>
                                         <h4 class="product-price">@Html.DisplayFor(modelItem => item.Price) TL</h4>
                                     </div>
+                                    </a>
                                     <div class="add-to-cart">
-                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Sepete Ekle</button>
+                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Sepete Ekle</button> 
                                     </div>
                                 </div>
+                  
                                 <!-- /product -->
                                 }
                             </div>
@@ -139,6 +142,7 @@
                                 @foreach (var item in Model)
                                 {        
                                 <div class="product">
+                                    <a asp-controller="Product" asp-action="Index" asp-route-id="@item.Id">
                                     <div class="product-img">
                                         <img src="@item.ImageUrl" alt="">
                                         <div class="product-label">
@@ -150,6 +154,7 @@
                                         <h3 class="product-name"><a href="#">@Html.DisplayFor(modelItem => item.ProductName)</a></h3>
                                         <h4 class="product-price">@Html.DisplayFor(modelItem => item.Price) TL</h4>
                                     </div>
+                                    </a>
                                     <div class="add-to-cart">
                                         <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Sepete Ekle</button>
                                     </div>
@@ -192,14 +197,16 @@
                             if(i++ == 5){ break;}                       
                         <!-- product widget -->
                         <div class="product-widget">
+                            <a asp-controller="Product" asp-action="Index" asp-route-id="@item.Id">
                             <div class="product-img">
                                 <img src="@item.ImageUrl" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">@Html.DisplayFor(modelItem => item.Category.CategoryName)</p>
-                                <h3 class="product-name"><a href="#">@Html.DisplayFor(modelItem => item.ProductName)</a></h3>
+                                <h3 class="product-name">@Html.DisplayFor(modelItem => item.ProductName)</h3>
                                 <h4 class="product-price">@Html.DisplayFor(modelItem => item.Price) TL</h4>
                             </div>
+                            </a>
                         </div>
                         <!-- /product widget -->
                         }
@@ -223,14 +230,16 @@
                             if(j++ == 5){ break;}                       
                         <!-- product widget -->
                         <div class="product-widget">
+                            <a asp-controller="Product" asp-action="Index" asp-route-id="@item.Id">
                             <div class="product-img">
                                 <img src="@item.ImageUrl" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">@Html.DisplayFor(modelItem => item.Category.CategoryName)</p>
-                                <h3 class="product-name"><a href="#">@Html.DisplayFor(modelItem => item.ProductName)</a></h3>
+                                <h3 class="product-name">@Html.DisplayFor(modelItem => item.ProductName)</h3>
                                 <h4 class="product-price">@Html.DisplayFor(modelItem => item.Price) TL</h4>
                             </div>
+                            </a>
                         </div>
                         <!-- /product widget -->
                         }
@@ -256,14 +265,16 @@
                             if(k++ == 5){ break;}                 
                         <!-- product widget -->
                         <div class="product-widget">
+                            <a asp-controller="Product" asp-action="Index" asp-route-id="@item.Id">
                             <div class="product-img">
                                 <img src="@item.ImageUrl" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">@Html.DisplayFor(modelItem => item.Category.CategoryName)</p>
-                                <h3 class="product-name"><a href="#">@Html.DisplayFor(modelItem => item.ProductName)</a></h3>
+                                <h3 class="product-name">@Html.DisplayFor(modelItem => item.ProductName)</h3>
                                 <h4 class="product-price">@Html.DisplayFor(modelItem => item.Price) TL</h4>
                             </div>
+                            </a>
                         </div>
                         <!-- /product widget -->
                         }

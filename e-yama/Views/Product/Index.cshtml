@@ -1,4 +1,4 @@
-﻿@model IEnumerable<e_yama.Models.ProductDetail>
+﻿@model e_yama.Models.Product;
 @{
     ViewData["Title"] = "E-Yama";
 }
@@ -11,7 +11,7 @@
             <div class="col-md-12">
                 <ul class="breadcrumb-tree">
                     <li><a href="#">Ana Sayfa</a></li>
-                    <li><a href="#">Kategori</a></li>
+                    <li><a href="#">@Model.Category</a></li>
                 </ul>
             </div>
         </div>
@@ -30,11 +30,11 @@
             <div class="col-md-5 col-md-push-2">
                 <div id="product-main-img">
                     <div class="product-preview">
-                        <img src=" item.Product.ImageUrl" alt="">
+                        <img src="@Model.ImageUrl" alt="">
                     </div>
 
                     <div class="product-preview">
-                        <img src=" item.Product.ImageUrl" alt="">
+                        <img src="@Model.ImageUrl" alt="">
                     </div>
                 </div>
             </div>
@@ -43,10 +43,10 @@
             <div class="col-md-2  col-md-pull-5">
                 <div id="product-imgs">
                     <div class="product-preview">
-                        <img src=" item.Product.ImageUrl" alt="">
+                        <img src="@Model.ImageUrl" alt="">
                     </div>
                     <div class="product-preview">
-                        <img src=" item.Product.ImageUrl" alt="">
+                        <img src="@Model.ImageUrl" alt="">
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
             <!-- Product details -->
             <div class="col-md-5">
                 <div class="product-details">
-                    <h2 class="product-name"> item.Product.ProductName</h2>
+                    <h2 class="product-name">@Model.ProductName</h2>
                     <div>
                         <div class="product-rating">
                             <i class="fa fa-star"></i>
@@ -66,10 +66,10 @@
                         <a class="review-link" href="#">1 Yorum | Yorum yaz</a>
                     </div>
                     <div>
-                        <h3 class="product-price"> item.Product.Price</h3>
+                        <h3 class="product-price">@Model.Price TL</h3>
                         <span class="product-available">STOKTA VAR</span>
                     </div>
-                    <p> item.Product.Description</p>
+                    <p>@Model.Description</p>
 
                     <div class="product-options">
                         <label>
